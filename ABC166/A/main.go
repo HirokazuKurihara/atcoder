@@ -5,7 +5,7 @@ import (
 )
 
 // A - A?C
-// https://atcoder.jp/contests/abc167/tasks/abc167_a
+// https://atcoder.jp/contests/abc166/tasks/abc166_a
 func main() {
 	var s string
 	fmt.Scanf("%s", &s)
