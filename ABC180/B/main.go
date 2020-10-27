@@ -5,6 +5,8 @@ import (
 	"math"
 )
 
+// B - Various distances
+// https://atcoder.jp/contests/abc180/tasks/abc180_b
 func main() {
 	var n int
 	fmt.Scanf("%d", &n)

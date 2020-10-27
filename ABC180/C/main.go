@@ -6,6 +6,8 @@ import (
 	"sort"
 )
 
+// C - Cream puff
+// https://atcoder.jp/contests/abc180/tasks/abc180_c
 func main() {
 	var n int
 	fmt.Scanf("%d", &n)
