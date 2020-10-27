@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+// A - hogehoge
+// https://atcoder.jp/contests/abcxxx/tasks/abcxxx_a
 //TODO: テンプレートのためコピー後は修正or削除要
 func main() {
 	var a int
