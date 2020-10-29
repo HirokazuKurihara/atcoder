@@ -34,6 +34,9 @@ func ABC177C(slice []int) int {
 	return sum
 }
 
+// 累積和のSliceを返す
+// param: 数値のSlice（要素数：i)
+// return: 累積和のSlice（要素数：i+1）
 func createCumulativeSumSlice(slice []int) []int {
 	lenSlice := len(slice)
 	cumulativeSumSlice := make([]int, lenSlice+1)
