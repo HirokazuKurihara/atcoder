@@ -11,7 +11,7 @@ func ScanInt() int {
 func ScanInts(n int) []int {
 	nums := make([]int, n)
 	for i := 0; i < n; i++ {
-		fmt.Scanf("%d", nums[i])
+		fmt.Scanf("%d", &nums[i])
 	}
 	return nums
 }
