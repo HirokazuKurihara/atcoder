@@ -19,11 +19,6 @@ func TestABC177C(t *testing.T) {
 			args: args{[]int{1, 2, 3}},
 			want: 11,
 		},
-		//{
-		//	name: "ok",
-		//	args: args{[]int{1, -2, 3}},
-		//	want: 1000000002,
-		//},
 		{
 			name: "ok",
 			args: args{[]int{141421356, 17320508, 22360679, 244949}},
