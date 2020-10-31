@@ -2,13 +2,13 @@ package util
 
 import "fmt"
 
-func ScanInt() int {
+func scanInt() int {
 	var num int
 	fmt.Scanf("%d", &num)
 	return num
 }
 
-func ScanInts(n int) []int {
+func scanInts(n int) []int {
 	nums := make([]int, n)
 	for i := 0; i < n; i++ {
 		fmt.Scanf("%d", &nums[i])
@@ -16,13 +16,13 @@ func ScanInts(n int) []int {
 	return nums
 }
 
-func ScanFloat() float64 {
+func scanFloat() float64 {
 	var num float64
 	fmt.Scanf("%f", &num)
 	return num
 }
 
-func ScanFloats(n int) []float64 {
+func scanFloats(n int) []float64 {
 	nums := make([]float64, n)
 	for i := 0; i < n; i++ {
 		fmt.Scanf("%f", &nums[i])
@@ -30,13 +30,13 @@ func ScanFloats(n int) []float64 {
 	return nums
 }
 
-func ScanString() string {
+func scanString() string {
 	var str string
 	fmt.Scanf("%s", &str)
 	return str
 }
 
-func ScanStrings(n int) []string {
+func scanStrings(n int) []string {
 	strs := make([]string, n)
 	for i := 0; i < n; i++ {
 		fmt.Scanf("%s", &strs[i])

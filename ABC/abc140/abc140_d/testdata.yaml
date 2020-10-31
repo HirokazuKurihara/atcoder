@@ -1,0 +1,16 @@
+- in: |-
+    6 1
+    LRLRRL
+  exp: "3"
+- in: |-
+    13 3
+    LRRLRLRRLRLLR
+  exp: "9"
+- in: |-
+    10 1
+    LLLLLRRRRR
+  exp: "9"
+- in: |-
+    9 2
+    RRRLRLRLL
+  exp: "7"

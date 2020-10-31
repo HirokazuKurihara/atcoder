@@ -1,0 +1,21 @@
+
+[AtCoder]
+  ContestID = "abc129"
+  ContestURL = "https://atcoder.jp/contests/abc129"
+  TaskID = "abc129_f"
+  TaskName = "F - Takahashi's Basics in Education and Learning"
+  TaskURL = "https://atcoder.jp/contests/abc129/tasks/abc129_f"
+
+[Environment]
+  BuildCmd = "go build -o ./a.out main.go"
+  BuildCmdOnDocker = "go build -o a.out main.go"
+  CleanCmd = "rm ./a.out"
+  Cmd = "./a.out"
+  CmdOnDocker = "./a.out"
+  DockerImage = "docker.io/library/golang:1.14.1"
+  Key = "go"
+  Language = "Go (1.14.1)"
+  LanguageCode = "4026"
+  Note = ""
+  SrcName = "main.go"
+  Template = "internal/go/main.go"

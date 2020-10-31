@@ -1,0 +1,8 @@
+- in: ASSA
+  exp: "Yes"
+- in: STOP
+  exp: "No"
+- in: FFEE
+  exp: "Yes"
+- in: FREE
+  exp: "No"
