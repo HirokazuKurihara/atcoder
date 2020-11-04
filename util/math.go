@@ -13,3 +13,28 @@ func fib(n int) int {
 	}
 	return fibMemo[n]
 }
+
+func abs(a int) int {
+	if a < 0 {
+		return -a
+	}
+	return a
+}
+
+func min(a ...int) int {
+	for _, e := range a {
+		if e < a[0] {
+			a[0] = e
+		}
+	}
+	return a[0]
+}
+
+func max(a ...int) int {
+	for _, e := range a {
+		if e > a[0] {
+			a[0] = e
+		}
+	}
+	return a[0]
+}

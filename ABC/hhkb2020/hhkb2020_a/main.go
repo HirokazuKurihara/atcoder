@@ -1,34 +1,24 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
+	"strings"
 )
 
 func main() {
-	// Code for B - Distance
-	n := scanInt()
-	d := scanInt()
-
-	fmt.Println(solve(n, d))
+	// Code for A - Keyboard
+	s := scanString()
+	t := scanString()
+	fmt.Println(solve(s, t))
 }
 
-func solve(n, d int) int {
+func solve(s, t string) string {
 
-	scanner := bufio.NewReader(os.Stdin)
-	x := 0
-	y := 0
-	cnt := 0
-	dd := d * d
-	for i := 0; i < n; i++ {
-		fmt.Fscan(scanner, &x, &y)
-		if x*x+y*y <= dd {
-			cnt++
-		}
+	if s == "Y" {
+		t = strings.ToUpper(t)
 	}
 
-	return cnt
+	return t
 }
 
 func scanInt() int {

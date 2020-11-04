@@ -1,10 +1,8 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	// Code for C - H and V
+	// Code for E - Transformable Teacher
 	fmt.Printf("Hello world")
 }

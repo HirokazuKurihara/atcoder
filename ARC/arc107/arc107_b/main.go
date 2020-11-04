@@ -10,13 +10,14 @@ func main() {
 	fmt.Println(solve(n, k))
 }
 
+// TODO: このままだと計算量が大きすぎるため修正要
 func solve(n, k int) int {
 
-	//a + b - c - d = K
-	//a: a = K - b + c + d
-	//b: b = b = K - a + c + d
-	//c: c = -K + a + b - d
-	//d: d = -K + a + b - c
+	// a + b - c - d = K
+	// a: a = K - b + c + d
+	// b: b = b = K - a + c + d
+	// c: c = -K + a + b - d
+	// d: d = -K + a + b - c
 
 	cnt := 0
 	minusK := k * (-1)

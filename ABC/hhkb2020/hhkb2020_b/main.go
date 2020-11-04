@@ -1,34 +1,44 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 )
 
 func main() {
-	// Code for B - Distance
-	n := scanInt()
-	d := scanInt()
+	// Code for B - Futon
+	h := scanInt()
+	w := scanInt()
+	slice := make([]string, h)
+	for i := 0; i < h; i++ {
+		slice[i] = scanString()
+	}
 
-	fmt.Println(solve(n, d))
+	fmt.Println(solve(h, w, slice))
 }
 
-func solve(n, d int) int {
+func solve(h, w int, slice []string) int {
 
-	scanner := bufio.NewReader(os.Stdin)
-	x := 0
-	y := 0
-	cnt := 0
-	dd := d * d
-	for i := 0; i < n; i++ {
-		fmt.Fscan(scanner, &x, &y)
-		if x*x+y*y <= dd {
-			cnt++
+	ans := 0
+
+	//横の探索
+	for i := 0; i < h; i++ {
+		for j := 0; j < w-1; j++ {
+			if slice[i][j] == '.' && slice[i][j+1] == '.' {
+				ans++
+			}
 		}
 	}
 
-	return cnt
+	//縦の探索
+	for i := 0; i < h-1; i++ {
+		for j := 0; j < w; j++ {
+			if slice[i][j] == '.' && slice[i+1][j] == '.' {
+				ans++
+			}
+		}
+	}
+
+	return ans
 }
 
 func scanInt() int {

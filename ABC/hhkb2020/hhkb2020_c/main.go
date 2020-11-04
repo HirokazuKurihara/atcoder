@@ -1,34 +1,39 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 )
 
 func main() {
-	// Code for B - Distance
+	// Code for C - Neq Min
 	n := scanInt()
-	d := scanInt()
+	p := scanInts(n)
 
-	fmt.Println(solve(n, d))
+	ans := solve(n, p)
+	for i := 0; i < n; i++ {
+		fmt.Println(ans[i])
+	}
 }
 
-func solve(n, d int) int {
+func solve(n int, p []int) []int {
+	const int32Max int = 2147483647
 
-	scanner := bufio.NewReader(os.Stdin)
-	x := 0
-	y := 0
-	cnt := 0
-	dd := d * d
+	ans := make([]int, n)
+	avoid := map[int]int{}
+	j := 0
 	for i := 0; i < n; i++ {
-		fmt.Fscan(scanner, &x, &y)
-		if x*x+y*y <= dd {
-			cnt++
+		// fmt.Printf("i:%d\n", i)
+
+		avoid[p[i]] = 1
+		// fmt.Printf("avoid:%v\n", avoid)
+		for avoid[j] == 1 {
+			j++
 		}
+		ans[i] = j
+		// fmt.Printf("ans:%v\n", ans)
 	}
 
-	return cnt
+	return ans
 }
 
 func scanInt() int {

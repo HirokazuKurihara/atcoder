@@ -1,34 +1,21 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
+import "fmt"
 
 func main() {
-	// Code for B - Distance
+	// Code for A - Heavy Rotation
 	n := scanInt()
-	d := scanInt()
-
-	fmt.Println(solve(n, d))
+	fmt.Println(solve(n))
 }
 
-func solve(n, d int) int {
+func solve(n int) string {
+	ret := "White"
 
-	scanner := bufio.NewReader(os.Stdin)
-	x := 0
-	y := 0
-	cnt := 0
-	dd := d * d
-	for i := 0; i < n; i++ {
-		fmt.Fscan(scanner, &x, &y)
-		if x*x+y*y <= dd {
-			cnt++
-		}
+	if n%2 == 1 {
+		ret = "Black"
 	}
 
-	return cnt
+	return ret
 }
 
 func scanInt() int {

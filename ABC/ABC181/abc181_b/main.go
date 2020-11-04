@@ -1,34 +1,27 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
+import "fmt"
 
 func main() {
-	// Code for B - Distance
+	// Code for B - Trapezoid Sum
 	n := scanInt()
-	d := scanInt()
-
-	fmt.Println(solve(n, d))
+	a := make([][2]float64, n)
+	// fmt.Printf("n:%d\n", n)
+	for i := 0; i < n; i++ {
+		fmt.Scanf("%f", &a[i][0])
+		fmt.Scanf("%f", &a[i][1])
+	}
+	// fmt.Printf("a:%v\n", a)
+	fmt.Println(solve(n, a))
 }
 
-func solve(n, d int) int {
-
-	scanner := bufio.NewReader(os.Stdin)
-	x := 0
-	y := 0
-	cnt := 0
-	dd := d * d
+func solve(n int, a [][2]float64) int {
+	ans := 0.0
 	for i := 0; i < n; i++ {
-		fmt.Fscan(scanner, &x, &y)
-		if x*x+y*y <= dd {
-			cnt++
-		}
+		ans += ((a[i][1] + a[i][0]) / 2) * (a[i][1] - a[i][0] + 1)
 	}
 
-	return cnt
+	return int(ans)
 }
 
 func scanInt() int {
