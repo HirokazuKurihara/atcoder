@@ -1,0 +1,6 @@
+- in: "1905"
+  exp: YYMM
+- in: "0112"
+  exp: AMBIGUOUS
+- in: "1700"
+  exp: NA
