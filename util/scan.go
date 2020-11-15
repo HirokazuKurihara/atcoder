@@ -1,45 +1,47 @@
 package util
 
-import "fmt"
+import (
+	"bufio"
+	"os"
+	"strconv"
+)
 
-func scanInt() int {
-	var num int
-	fmt.Scanf("%d", &num)
+/* Template */
+
+var sc *bufio.Scanner
+
+func init() {
+	maxBufSize := 1001001
+	sc = bufio.NewScanner(os.Stdin)
+	sc.Buffer(make([]byte, 0, maxBufSize), maxBufSize) //Bufferサイズの再定義
+	sc.Split(bufio.ScanWords)
+}
+
+func nextInt() int {
+	if !sc.Scan() {
+		panic("No more token.")
+	}
+	num, err := strconv.Atoi(sc.Text())
+	if err != nil {
+		panic("nextInt(): cannot convert to int: " + sc.Text())
+	}
 	return num
 }
 
-func scanInts(n int) []int {
-	nums := make([]int, n)
-	for i := 0; i < n; i++ {
-		fmt.Scanf("%d", &nums[i])
+func nextFloat() float64 {
+	if !sc.Scan() {
+		panic("No more token.")
 	}
-	return nums
-}
-
-func scanFloat() float64 {
-	var num float64
-	fmt.Scanf("%f", &num)
-	return num
-}
-
-func scanFloats(n int) []float64 {
-	nums := make([]float64, n)
-	for i := 0; i < n; i++ {
-		fmt.Scanf("%f", &nums[i])
+	numF, err := strconv.ParseFloat(sc.Text(), 64)
+	if err != nil {
+		panic("nextFloat(): cannot convert to float: " + sc.Text())
 	}
-	return nums
+	return numF
 }
 
-func scanString() string {
-	var str string
-	fmt.Scanf("%s", &str)
-	return str
-}
-
-func scanStrings(n int) []string {
-	strs := make([]string, n)
-	for i := 0; i < n; i++ {
-		fmt.Scanf("%s", &strs[i])
+func nextStr() string {
+	if !sc.Scan() {
+		panic("No more token.")
 	}
-	return strs
+	return sc.Text()
 }

@@ -9,23 +9,35 @@ import (
 )
 
 func main() {
-	// Code for B - Mix Juice
+	// Code for B - Almost GCD
 	n := nextInt()
-	k := nextInt()
 	nums := make([]int, n)
 	for i := 0; i < n; i++ {
 		nums[i] = nextInt()
 	}
-
-	fmt.Println(solve(n, k, nums))
+	fmt.Println(solve(n, nums))
 }
 
-func solve(n, k int, nums []int) int {
-	ans := 0
+func solve(n int, nums []int) int {
 
 	sort.Ints(nums)
-	for i := 0; i < k; i++ {
-		ans += nums[i]
+	// fmt.Println(nums)
+	ans := 0
+	maxCnt := 0
+	for i := 2; i <= nums[n-1]; i++ {
+		cnt := 0
+		for j := 0; j < n; j++ {
+			if nums[j]%i == 0 {
+				cnt++
+			}
+		}
+
+		if maxCnt <= cnt {
+			maxCnt = cnt
+			ans = i
+
+			// fmt.Println("maxCnt:", maxCnt, "ans:", ans)
+		}
 	}
 
 	return ans

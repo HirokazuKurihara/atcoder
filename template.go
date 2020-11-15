@@ -4,29 +4,24 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"sort"
 	"strconv"
 )
 
 func main() {
-	// Code for B - Mix Juice
+	a := nextInt()
+	b := nextInt()
 	n := nextInt()
-	k := nextInt()
+	s := nextStr()
 	nums := make([]int, n)
 	for i := 0; i < n; i++ {
 		nums[i] = nextInt()
 	}
 
-	fmt.Println(solve(n, k, nums))
+	fmt.Println(solve(a, b, n, s, nums))
 }
 
-func solve(n, k int, nums []int) int {
+func solve(a, b, n int, s string, nums []int) int {
 	ans := 0
-
-	sort.Ints(nums)
-	for i := 0; i < k; i++ {
-		ans += nums[i]
-	}
 
 	return ans
 }

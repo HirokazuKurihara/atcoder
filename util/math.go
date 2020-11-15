@@ -38,3 +38,11 @@ func max(a ...int) int {
 	}
 	return a[0]
 }
+
+func pow(a, n int) int {
+	ret := 1
+	for i := 1; i <= n; i++ {
+		ret *= a
+	}
+	return ret
+}
