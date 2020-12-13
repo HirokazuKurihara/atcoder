@@ -32,11 +32,10 @@ func (q *Queue) push(i int) {
 func (q *Queue) pop() (int, bool) {
 	if q.empty() {
 		return 0, false
-	} else {
-		res := (*q)[0]
-		*q = (*q)[1:]
-		return res, true
 	}
+	res := (*q)[0]
+	*q = (*q)[1:]
+	return res, true
 }
 
 // Stack ...
@@ -56,10 +55,9 @@ func (s *Stack) push(i int) {
 func (s *Stack) pop() (int, bool) {
 	if s.empty() {
 		return 0, false
-	} else {
-		index := len(*s) - 1
-		res := (*s)[index]
-		*s = (*s)[:index]
-		return res, true
 	}
+	index := len(*s) - 1
+	res := (*s)[index]
+	*s = (*s)[:index]
+	return res, true
 }
