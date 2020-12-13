@@ -1,0 +1,12 @@
+- in: |-
+    3 0
+    xox
+  exp: "0"
+- in: |-
+    20 199999
+    oooooooooxoooooooooo
+  exp: "200017"
+- in: |-
+    20 10
+    xxxxxxxxxxxxxxxxxxxx
+  exp: "0"
