@@ -65,21 +65,23 @@ func fact(a int) int {
 }
 
 func min(a ...int) int {
+	tmp := a[0]
 	for _, e := range a {
-		if e < a[0] {
-			a[0] = e
+		if e < tmp {
+			tmp = e
 		}
 	}
-	return a[0]
+	return tmp
 }
 
 func max(a ...int) int {
+	tmp := a[0]
 	for _, e := range a {
-		if e > a[0] {
-			a[0] = e
+		if e > tmp {
+			tmp = e
 		}
 	}
-	return a[0]
+	return tmp
 }
 
 func pow(a, n int) int {
